@@ -418,6 +418,7 @@ def TestPredict(testVector, node, colArr):
 def TestData(rootNode):
     testdataList = []
 
+    #change the file name to test.csv or train.csv to run tests with test or training data respectively
     with open('train.csv', 'r') as f:
         for line in f:
             terms = line.strip().split(',')
@@ -448,7 +449,11 @@ def DecisionDriver():
     setFeatureAttrCount(arr, ["buying", "maint", "doors", "persons", "lug_boot", "safety", "label"])
     FixTrainingData()
     setFeatureAttrCount(arr, ["buying", "maint", "doors", "persons", "lug_boot", "safety", "label"])
+
+    #Change the max depth value here to change the depth of the decision tree.
     maxDepth = 6
+
+    #Change the Function name to ID3DecisionEntropyTree or ID3DecisionMajorityTree or ID3DecisionGiniTree to use the respective algorithms.
     node = ID3DecisionEntropyTree(arr, np.array(["buying", "maint", "doors", "persons", "lug_boot", "safety", "label"]), 0, maxDepth)
     
     TestData(node)

@@ -563,6 +563,7 @@ def TestPredict(testVector, node, colArr):
 def TestData(rootNode):
     testdataList = []
 
+    #change the file name to test.csv or train.csv to run tests with test or training data respectively
     with open('test.csv', 'r') as f:
         for line in f:
             terms = line.strip().split(',')
@@ -571,7 +572,10 @@ def TestData(rootNode):
     testArr = np.array(testdataList)
 
     testContArr = setContiniousValueTest(testArr)
+
+    #Comment this line to replace missing data with "unknown". Uncomment it replace missing data with majority value
     testData = FixTestData(testContArr)
+
     totalCount = len(testData)
     passCount = 0
     with open("myfile.txt", "w") as w:
@@ -592,9 +596,16 @@ def TestData(rootNode):
 def DecisionDriver():
     setContiniousValue()
     setFeatureAttrCount(arr, ["age", "job", "marital", "education", "default", "balance", "housing", "loan", "contact", "day", "month", "duration", "campaign", "pdays", "previous", "poutcome", "y"])
+
+    #Comment this line to replace missing data with "unknown". Uncomment it replace missing data with majority value
     FixTrainingData()
+
     setFeatureAttrCount(arr, ["age", "job", "marital", "education", "default", "balance", "housing", "loan", "contact", "day", "month", "duration", "campaign", "pdays", "previous", "poutcome", "y"])
+
+    #Change the max depth value here to change the depth of the decision tree.
     maxDepth = 16
+
+    #Change the Function name to ID3DecisionEntropyTree or ID3DecisionMajorityTree or ID3DecisionGiniTree to use the respective algorithms.
     node = ID3DecisionMajorityTree(arr, np.array(["age", "job", "marital", "education", "default", "balance", "housing", "loan", "contact", "day", "month", "duration", "campaign", "pdays", "previous", "poutcome", "y"]), 0, maxDepth)
     
     TestData(node)

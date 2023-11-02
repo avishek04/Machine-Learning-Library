@@ -10,11 +10,13 @@ uId: u1428226
 
 Every code file has their own run.sh file added in each directory. Here is what my run.sh file looks like:
 
------------------
+**********
+
 #! /bin/bash
 echo "running python code..."
 python3 batchGD.py
---------------
+
+**********
 
 In the above texts please change "python3" with the version of python used in the system the code will be run.
 

@@ -6,7 +6,7 @@ This is a machine learning library developed by Avishek Choudhury for CS5350/635
 uId: u1428226
 
 
-#HW2 Instructions:
+# HW2 Instructions:
 
 Every code file has their own run.sh file added in each directory. Here is what my run.sh file looks like:
 

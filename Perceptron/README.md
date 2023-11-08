@@ -46,5 +46,5 @@ To run each code (each problem):
 Navigate to all three directory and run their respective run.sh file using the below statement to get the expected results:
 
 ```script
-**./run.sh**
+./run.sh
 ```

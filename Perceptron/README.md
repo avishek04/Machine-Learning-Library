@@ -2,9 +2,9 @@
 
 This directory consists of three sub-directory for the three coding problems:
 
-1. **Standard Perceptron
+1. Standard Perceptron
 2. Voted Perceptron
-3. Average Perceptron**
+3. Average Perceptron
 
 ## Standard Perceptron
 

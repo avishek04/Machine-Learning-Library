@@ -23,7 +23,7 @@ pyTorch.py implements the below question:
 
 Running the pyTorch.py code file will produce the output to the problem 2(e).
 
-To run the neuralNet.py code:
+To run the pyTorch.py code:
 
 ```script
 ./run2.sh

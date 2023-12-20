@@ -79,8 +79,8 @@ class NeuralNetTorch(nn.Module):
 
 
 if __name__ == "__main__":
-    X_train = pd.read_csv('train.csv', header=None)
-    X_test = pd.read_csv('test.csv', header=None)
+    X_train = pd.read_csv('trainKag.csv', header=None)
+    X_test = pd.read_csv('testKag.csv', header=None)
 
     y = np.array(X_train.iloc[:, 4])
     X_train = np.array(X_train.iloc[:, :4])
